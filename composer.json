@@ -1,0 +1,11 @@
+{
+    "name": "ovr/phalcon-elasticsearch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patsura Dmitry",
+            "email": "talk@dmtry.me"
+        }
+    ],
+    "require": {}
+}
