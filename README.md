@@ -39,7 +39,7 @@ class Project extends Injectable
 
 Use
 
-```
+```php
 $result = Project::myQuery(25);
 ```
 
