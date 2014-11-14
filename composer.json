@@ -3,6 +3,10 @@
     "license": "MIT",
     "authors": [
         {
+            "name": "Serebro",
+            "homepage": "http://github.com/serebro/"
+        },
+        {
             "name": "Patsura Dmitry",
             "email": "talk@dmtry.me"
         }
