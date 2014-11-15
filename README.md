@@ -8,9 +8,11 @@ Create your model
 ```php
 namespace Models;
 
+use Ovr\Phalcon\Elastic\ModelTrait;
+
 class Project extends Injectable
 {
-    use ElasticModelTrait;
+    use ModelTrait;
     
     protected static $index = 'phalconist';
     protected static $type = 'project';
