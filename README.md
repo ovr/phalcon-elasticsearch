@@ -33,6 +33,7 @@ class Project extends Injectable
                 ]
             ]
         ];
+        
         $resultSet = static::getStorage()->search($query);
         return static::toTags($resultSet->getAggregation('types')['buckets'], 'key', 'doc_count');
     }
