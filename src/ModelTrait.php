@@ -16,6 +16,7 @@ trait ModelTrait
     {
         return \Phalcon\DI::getDefault();
     }
+    
     /**
      * @return \Elastica\Client
      */
@@ -23,6 +24,7 @@ trait ModelTrait
     {
         return self::di()->get('elastica');
     }
+    
     /**
      * @return \Elastica\Type
      */
@@ -30,6 +32,7 @@ trait ModelTrait
     {
         return static::getConnection()->getIndex(static::$index)->getType(static::$type);
     }
+    
     /**
      * @param $id
      * @return \Elastica\Document
@@ -38,6 +41,7 @@ trait ModelTrait
     {
         return static::getStorage()->getDocument($id);
     }
+    
     /**
      * @param $data
      * @return \Elastica\Response
@@ -49,6 +53,7 @@ trait ModelTrait
         $doc = new \Elastica\Document($data['id'], $data);
         return static::getStorage()->addDocument($doc);
     }
+    
     /**
      * @param $id
      * @return \Elastica\Response
@@ -57,6 +62,7 @@ trait ModelTrait
     {
         return static::getStorage()->deleteById($id);
     }
+    
     /**
      * @param string $time
      * @return \DateTime
