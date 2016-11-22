@@ -44,13 +44,17 @@ trait ModelTrait
     
     /**
      * @param $data
+     * @param $parent string|id
      * @return \Elastica\Response
      */
-    public static function add($data)
+    public static function add($data, $parent=null)
     {
         $data['id'] = empty($data['id']) ? null : $data['id'];
         $data['synced'] = static::utcTime()->format(DATE_ISO8601);
         $doc = new \Elastica\Document($data['id'], $data);
+        if ($parent) {
+            $doc->setParent($parent);
+        }
         return static::getStorage()->addDocument($doc);
     }
     
