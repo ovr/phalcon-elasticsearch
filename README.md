@@ -1,7 +1,7 @@
 Phalcon + Elastic
 =================
 
-# How to use
+# Usage 
 
 Create your model
 
